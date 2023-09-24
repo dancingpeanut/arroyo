@@ -5,3 +5,4 @@ target/
 arroyo-openapi/api-spec.json
 arroyo-openapi/client
 
+.DS_Store
