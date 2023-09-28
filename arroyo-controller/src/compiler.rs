@@ -105,6 +105,8 @@ impl ProgramCompiler {
         let program = format!("program_{}", self.name);
         dir.push(&program);
 
+        info!("Compiling tmp dir: {:?}", &dir);
+
         fs::create_dir_all(&dir)?;
 
         let types = self.compile_types().to_string();

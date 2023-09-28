@@ -166,7 +166,7 @@ impl CompileService {
     }
 
     async fn compile(&self, req: CompileQueryReq) -> anyhow::Result<CompileQueryResp> {
-        info!("Starting compilation for {}", req.job_id);
+        info!("Starting compilation for {}, build dir: {:?}", req.job_id, &self.build_dir.as_os_str().to_str());
         let start = Instant::now();
         let build_dir = &self.build_dir;
         tokio::fs::write(build_dir.join("pipeline/src/main.rs"), &req.pipeline).await?;
