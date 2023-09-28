@@ -7,3 +7,4 @@ arroyo-openapi/client
 
 .DS_Store
 tmp
+*.log
